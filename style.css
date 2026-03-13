@@ -27,7 +27,7 @@ img {
 .sobre-container,
 .container-contato {
   width: 90%;
-  
+
   margin: auto;
 }
 
@@ -395,11 +395,14 @@ section {
 .hora {
   border-radius: 10px;
   text-align: center;
- 
-  
 }
-
-
+footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  height: 50px;
+  padding-top: 15px;
+}
 /* ===== RESPONSIVIDADE ===== */
 
 @media (max-width: 1024px) {
@@ -423,6 +426,14 @@ section {
   .sobre-img img {
     box-shadow: 0 15px 0 #f4b400;
     margin-bottom: 40px;
+  }
+
+  footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 80px;
+    padding-top: 15px;
   }
 }
 
@@ -452,6 +463,14 @@ section {
   .container-contato iframe {
     height: 300px;
   }
+
+  footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 80px;
+    padding-top: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -461,5 +480,12 @@ section {
 
   .galeria-grid {
     grid-template-columns: 1fr;
+  }
+  footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 80px;
+    padding-top: 15px;
   }
 }
