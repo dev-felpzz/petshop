@@ -474,24 +474,112 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
-    font-size: 30px;
-  }
 
+  /* HEADER */
   header {
     flex-direction: column;
+    padding: 15px;
     gap: 10px;
-    padding: 15px 20px;
   }
 
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 90vh;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  /* SEÇÕES */
+  section {
+    padding: 70px 20px;
+  }
+
+  /* SOBRE */
+  .sobre-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .sobre-img img {
+    max-width: 100%;
+  }
+
+  /* REDES */
+  .social-links {
+    gap: 25px;
+  }
+
+  .social-item img {
+    width: 40px;
+  }
+
+  /* PARCERIAS */
+  .roleta-track {
+    gap: 40px;
+  }
+
+  .roleta-track img {
+    width: 120px;
+    height: 70px;
+  }
+
+  /* GALERIA */
   .galeria-grid {
     grid-template-columns: 1fr;
   }
-  footer {
-    background-color: black;
-    text-align: center;
-    color: white;
-    height: 80px;
-    padding-top: 15px;
+
+  .galeria-item {
+    height: 250px;
   }
+
+  /* CONTATO */
+  .container-contato {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .container-contato iframe {
+    height: 250px;
+  }
+
+  .info-contato {
+    align-items: center;
+    text-align: center;
+  }
+
+  .item {
+    justify-content: center;
+  }
+
+  /* FOOTER */
+  footer {
+    height: auto;
+    padding: 15px;
+    font-size: 14px;
+  }
+
 }
+
