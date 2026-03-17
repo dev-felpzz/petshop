@@ -190,7 +190,6 @@ section h2 {
   background: transparent;
 }
 
-
 /* ===== SOBRE ===== */
 
 .sobre-container {
@@ -327,6 +326,32 @@ section h2 {
 .social-content p {
   margin-bottom: 20px;
 }
+.sobre-img,
+.sobre-text {
+  flex: 1;
+}
+.sobre-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sobre-text h2,
+.sobre-text h4,
+.sobre-text p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.sobre-text p {
+  max-width: 500px;
+  line-height: 1.6;
+  margin: auto;
+}
 
 .social-content .btn {
   background: black;
@@ -390,11 +415,23 @@ section h2 {
 
 .item img {
   width: 35px;
+  height: 35px;
+  object-fit: contain;
 }
-
 .item a {
   text-decoration: none;
   color: #222;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.item img {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
 }
 
 /* HORÁRIO */
@@ -613,6 +650,3 @@ footer {
     font-size: 14px;
   }
 }
-
-
-
