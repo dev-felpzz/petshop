@@ -1,6 +1,7 @@
 /* ============================================================
    1. RESET & DEFINIÇÕES GERAIS
    ============================================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +26,7 @@ img {
 /* ============================================================
    2. CONTAINERS E UTILITÁRIOS
    ============================================================ */
+
 .container,
 .sobre-container,
 .container-contato {
@@ -61,6 +63,7 @@ section h2 {
 /* ============================================================
    3. HEADER & NAVEGAÇÃO
    ============================================================ */
+
 header {
   position: fixed;
   top: 0;
@@ -111,6 +114,7 @@ nav a:hover {
 /* ============================================================
    4. HERO (BANNER INICIAL)
    ============================================================ */
+
 .hero {
   height: 100vh;
   background: url("img/banner.png") center/cover no-repeat fixed;
@@ -157,6 +161,7 @@ nav a:hover {
 /* ============================================================
    5. BOTÕES
    ============================================================ */
+
 .hero-buttons {
   margin-top: 30px;
 }
@@ -188,6 +193,7 @@ nav a:hover {
 /* ============================================================
    6. SOBRE
    ============================================================ */
+
 .sobre-container {
   display: flex;
   align-items: center;
@@ -221,6 +227,7 @@ nav a:hover {
 /* ============================================================
    7. PARCERIAS
    ============================================================ */
+
 .parcerias {
   text-align: center;
   background: #ffffc5;
@@ -260,6 +267,7 @@ nav a:hover {
 /* ============================================================
    8. GALERIA
    ============================================================ */
+
 .galeria {
   text-align: center;
 }
@@ -317,6 +325,7 @@ nav a:hover {
 }
 
 /* Card Social Consultar Preços */
+
 .galeria-card-social {
   background: #f4b400;
   border-radius: 20px;
@@ -348,6 +357,7 @@ nav a:hover {
 /* ============================================================
    9. CONTATO & LOCALIZAÇÃO
    ============================================================ */
+
 .contato {
   text-align: center;
 }
@@ -416,6 +426,7 @@ nav a:hover {
 /* ============================================================
    10. RODAPÉ & VOLTAR AO TOPO
    ============================================================ */
+
 footer {
   background: black;
   color: white;
@@ -445,48 +456,41 @@ footer {
 }
 
 /* ============================================================
-   REMOÇÃO DEFINITIVA DE BORDAS E ESPAÇOS ENTRE SEÇÕES
-   ============================================================ */
-
-/* Remove qualquer espaço, borda ou contorno das seções e faixas */
-section, 
-.section-mini, 
-.section-desc, 
-.parcerias, 
-.roleta {
-  margin: 0 !important;
-  padding-top: 40px;    /* Controle o respiro apenas pelo padding */
-  padding-bottom: 40px; /* Nunca use margin para separar cores de fundo */
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Garante que a roleta de logos não tenha margens internas que gerem frestas */
-.roleta-track {
-  margin: 0 !important;
-  display: flex;
-}
-
-/* Se houver algum <h2> ou <p> com margem no topo, ele pode "empurrar" a cor */
-.section-mini h2, 
-.section-desc h4, 
-.parcerias h2 {
-  margin-top: 0 !important;
-}
-
-/* ============================================================
    11. RESPONSIVIDADE (MEDIA QUERIES)
    ============================================================ */
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+/* TABLET */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     padding: 15px 20px;
   }
 
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 20px;
+    text-align: center;
+  }
+
   .hero h1 {
-    font-size: 38px;
+    font-size: 40px;
+  }
+
+  .sobre-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
   }
 
   .galeria-grid {
@@ -495,9 +499,11 @@ section,
 
   .container-contato {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 
+/* CELULAR */
 @media (max-width: 480px) {
   header {
     padding: 15px;
@@ -510,12 +516,17 @@ section,
   }
 
   .hero {
-    height: 90vh;
-    padding: 20px;
+    height: auto;
+    padding: 80px 20px;
   }
 
   .hero h1 {
     font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .sobre-container {
@@ -525,10 +536,15 @@ section,
   }
 
   .sobre-img img {
+    max-width: 100%;
     box-shadow: 0 10px 0 #f4b400;
   }
 
   .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container-contato {
     grid-template-columns: 1fr;
   }
 
