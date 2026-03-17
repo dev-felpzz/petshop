@@ -25,3 +25,5 @@ CNPJ: 60.748.616/0001-77
 Porte: Microempresa
 Atividade principal: Higiene e embelezamento de animais domésticos
 Sócio-administrador: David de Jesus Magalhaes
+
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/297fc4ac-92e3-4fb4-8723-d7d7a402d148" />
