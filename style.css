@@ -1,5 +1,6 @@
-/* ===== RESET ===== */
-
+/* ============================================================
+   1. RESET & DEFINIÇÕES GERAIS
+   ============================================================ */
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +22,25 @@ img {
   display: block;
 }
 
-/* ===== CONTAINERS ===== */
+/* ============================================================
+   2. CONTAINERS E UTILITÁRIOS
+   ============================================================ */
+.container,
+.sobre-container,
+.container-contato {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  font-weight: 800;
+  padding-top: 30px;
+}
 
 .section-mini {
   text-align: center;
@@ -31,8 +50,17 @@ img {
   width: 100%;
 }
 
-/* ===== HEADER ===== */
+.section-desc {
+  background: #f4b400;
+  color: black;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+}
 
+/* ============================================================
+   3. HEADER & NAVEGAÇÃO
+   ============================================================ */
 header {
   position: fixed;
   top: 0;
@@ -80,8 +108,9 @@ nav a:hover {
   color: black;
 }
 
-/* ===== HERO ===== */
-
+/* ============================================================
+   4. HERO (BANNER INICIAL)
+   ============================================================ */
 .hero {
   height: 100vh;
   background: url("img/banner.png") center/cover no-repeat fixed;
@@ -125,6 +154,9 @@ nav a:hover {
   opacity: 0.9;
 }
 
+/* ============================================================
+   5. BOTÕES
+   ============================================================ */
 .hero-buttons {
   margin-top: 30px;
 }
@@ -144,14 +176,6 @@ nav a:hover {
   color: black;
 }
 
-.container,
-.sobre-container,
-.container-contato {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
 .outline {
   border: 2px solid white;
   color: white;
@@ -161,46 +185,16 @@ nav a:hover {
   transform: translateY(-3px);
 }
 
-/* ===== SEÇÕES ===== */
-
-section {
-  padding: 60px 0;
-}
-
-section h2 {
-  font-weight: 800;
-  padding-top: 30px;
-}
-
-.section-mini,
-.section-desc,
-.parcerias {
-  width: 100%;
-}
-
-.section-desc {
-  background: #f4b400;
-  color: black;
-  padding: 15px 0;
-  text-align: center;
-  width: 100%;
-}
-
-.parcerias .section-desc {
-  background: transparent;
-}
-
-/* ===== SOBRE ===== */
-
+/* ============================================================
+   6. SOBRE
+   ============================================================ */
 .sobre-container {
   display: flex;
   align-items: center;
   gap: 80px;
-  text-align: center;
 }
 
-.sobre-img,
-.sobre-text {
+.sobre-img {
   flex: 1;
 }
 
@@ -210,12 +204,31 @@ section h2 {
   box-shadow: -20px 20px 0 #f4b400;
 }
 
-/* ===== PARCERIAS ===== */
+.sobre-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.sobre-text p {
+  max-width: 500px;
+  line-height: 1.6;
+  margin: 20px auto;
+}
+
+/* ============================================================
+   7. PARCERIAS
+   ============================================================ */
 .parcerias {
   text-align: center;
   background: #ffffc5;
-  padding: 0 0 0px 0;
+  padding: 60px 0;
+}
+
+.parcerias .section-desc {
+  background: transparent;
 }
 
 .roleta {
@@ -244,8 +257,9 @@ section h2 {
   transform: scale(1.15);
 }
 
-/* ===== GALERIA ===== */
-
+/* ============================================================
+   8. GALERIA
+   ============================================================ */
 .galeria {
   text-align: center;
 }
@@ -289,6 +303,7 @@ section h2 {
   padding: 4px 10px;
   border-radius: 5px;
   margin-bottom: 8px;
+  width: fit-content;
 }
 
 .galeria-overlay p {
@@ -301,8 +316,7 @@ section h2 {
   transform: scale(1.1);
 }
 
-/* ===== CARD CONSULTAR PREÇOS ===== */
-
+/* Card Social Consultar Preços */
 .galeria-card-social {
   background: #f4b400;
   border-radius: 20px;
@@ -323,51 +337,19 @@ section h2 {
   margin-bottom: 10px;
 }
 
-.social-content p {
-  margin-bottom: 20px;
-}
-.sobre-img,
-.sobre-text {
-  flex: 1;
-}
-.sobre-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.sobre-text h2,
-.sobre-text h4,
-.sobre-text p {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
-.sobre-text p {
-  max-width: 500px;
-  line-height: 1.6;
-  margin: auto;
-}
-
 .social-content .btn {
   background: black;
   color: white;
   border-radius: 30px;
   padding: 12px 25px;
+  margin-top: 20px;
 }
 
-/* ===== CONTATO ===== */
-
+/* ============================================================
+   9. CONTATO & LOCALIZAÇÃO
+   ============================================================ */
 .contato {
   text-align: center;
-}
-
-.contato h2 {
-  font-weight: 800;
 }
 
 .contato h4 {
@@ -375,8 +357,6 @@ section h2 {
   margin-bottom: 40px;
   color: #555;
 }
-
-/* GRID CONTATO */
 
 .container-contato {
   display: grid;
@@ -386,74 +366,13 @@ section h2 {
   align-items: start;
 }
 
-/* MAPA */
-
 .container-contato iframe {
   width: 100%;
   height: 350px;
   border-radius: 10px;
+  border: none;
 }
 
-/* INFO CONTATO */
-
-.info-contato {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 16px;
-}
-
-.item img {
-  width: 35px;
-  height: 35px;
-  object-fit: contain;
-}
-.item a {
-  text-decoration: none;
-  color: #222;
-}
-.item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.item img {
-  width: 35px;
-  height: 35px;
-  min-width: 35px;
-}
-
-/* HORÁRIO */
-
-.hora {
-  background: #f4b400;
-  padding: 25px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* MAPA */
-
-.container-contato iframe {
-  width: 100%;
-  max-width: 800px;
-  height: 350px;
-  border-radius: 10px;
-}
-
-/* INFO CONTATO */
 .info-contato {
   display: flex;
   flex-direction: column;
@@ -462,7 +381,7 @@ section h2 {
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  align-items: flex-start; /* alinhamento à esquerda */
+  align-items: flex-start;
   text-align: left;
 }
 
@@ -471,20 +390,20 @@ section h2 {
   align-items: center;
   gap: 15px;
   font-size: 16px;
-  justify-content: flex-start;
   text-align: left;
 }
 
 .item img {
   width: 35px;
+  height: 35px;
+  min-width: 35px;
+  object-fit: contain;
 }
 
 .item a {
   text-decoration: none;
   color: #222;
 }
-
-/* HORÁRIO */
 
 .hora {
   background: #f4b400;
@@ -494,8 +413,9 @@ section h2 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== RODAPÉ ===== */
-
+/* ============================================================
+   10. RODAPÉ & VOLTAR AO TOPO
+   ============================================================ */
 footer {
   background: black;
   color: white;
@@ -503,8 +423,6 @@ footer {
   padding: 25px;
   margin-top: 60px;
 }
-
-/* ===== BOTÃO SUBIR ===== */
 
 .suba {
   position: fixed;
@@ -521,12 +439,45 @@ footer {
 .suba:hover {
   transform: scale(1.1);
 }
+
 .suba img {
   width: 25px;
 }
 
-/* ===== RESPONSIVO ===== */
+/* ============================================================
+   REMOÇÃO DEFINITIVA DE BORDAS E ESPAÇOS ENTRE SEÇÕES
+   ============================================================ */
 
+/* Remove qualquer espaço, borda ou contorno das seções e faixas */
+section, 
+.section-mini, 
+.section-desc, 
+.parcerias, 
+.roleta {
+  margin: 0 !important;
+  padding-top: 40px;    /* Controle o respiro apenas pelo padding */
+  padding-bottom: 40px; /* Nunca use margin para separar cores de fundo */
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Garante que a roleta de logos não tenha margens internas que gerem frestas */
+.roleta-track {
+  margin: 0 !important;
+  display: flex;
+}
+
+/* Se houver algum <h2> ou <p> com margem no topo, ele pode "empurrar" a cor */
+.section-mini h2, 
+.section-desc h4, 
+.parcerias h2 {
+  margin-top: 0 !important;
+}
+
+/* ============================================================
+   11. RESPONSIVIDADE (MEDIA QUERIES)
+   ============================================================ */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -541,15 +492,15 @@ footer {
   .galeria-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .container-contato {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
-  /* HEADER */
-
   header {
-    flex-direction: column;
     padding: 15px;
-    gap: 10px;
   }
 
   nav ul {
@@ -558,12 +509,6 @@ footer {
     gap: 10px;
   }
 
-  nav a {
-    font-size: 13px;
-  }
-
-  /* HERO */
-
   .hero {
     height: 90vh;
     padding: 20px;
@@ -571,25 +516,7 @@ footer {
 
   .hero h1 {
     font-size: 28px;
-    line-height: 1.2;
   }
-
-  .desc {
-    font-size: 14px;
-  }
-
-  .btn {
-    padding: 12px 25px;
-    font-size: 14px;
-  }
-
-  /* SEÇÕES */
-
-  section {
-    padding: 70px 20px;
-  }
-
-  /* SOBRE */
 
   .sobre-container {
     flex-direction: column;
@@ -598,40 +525,11 @@ footer {
   }
 
   .sobre-img img {
-    max-width: 100%;
     box-shadow: 0 10px 0 #f4b400;
   }
 
-  /* PARCERIAS */
-
-  .roleta-track {
-    gap: 40px;
-  }
-
-  .roleta-track img {
-    width: 120px;
-    height: 70px;
-  }
-
-  /* GALERIA */
-
   .galeria-grid {
     grid-template-columns: 1fr;
-  }
-
-  .galeria-item {
-    height: 250px;
-  }
-
-  /* CONTATO */
-
-  .container-contato {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .container-contato iframe {
-    height: 250px;
   }
 
   .info-contato {
@@ -641,12 +539,5 @@ footer {
 
   .item {
     justify-content: center;
-  }
-
-  /* FOOTER */
-
-  footer {
-    padding: 15px;
-    font-size: 14px;
   }
 }
